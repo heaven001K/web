@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Клас Літак</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Літаки</h1>
+
+    <!-- Форма для додавання літаків -->
+    <form id="airplane-form">
+        <label for="name">Назва літака:</label>
+        <input type="text" id="name" placeholder="Введіть назву літака" required>
+
+        <label for="fuel">Об'єм паливних баків (літри):</label>
+        <input type="number" id="fuel" placeholder="Введіть об'єм баків" required>
+
+        <label for="passengers">Кількість пасажирів:</label>
+        <input type="number" id="passengers" placeholder="Введіть кількість пасажирів" required>
+
+        <button type="submit">Додати літак</button>
+    </form>
+
+    <!-- Поле для пошуку -->
+    <input type="text" id="search" placeholder="Пошук літака за назвою...">
+
+    <!-- Кнопки для сортування -->
+    <div class="sort-buttons">
+        <button id="sort-name">Сортувати за назвою</button>
+        <button id="sort-fuel">Сортувати за паливом</button>
+        <button id="sort-passengers">Сортувати за пасажирами</button>
+    </div>
+
+    <!-- Таблиця для відображення літаків -->
+    <table id="airplane-table">
+        <thead>
+        <tr>
+            <th>Назва літака</th>
+            <th>Об'єм паливних баків</th>
+            <th>Кількість пасажирів</th>
+            <th>Дії</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div id="total-passengers">Загальна кількість пасажирів: 0</div>
+
+
+    <div id="output"></div>
+</div>
+
+<script src="lol.js"></script>
+</body>
+</html>
