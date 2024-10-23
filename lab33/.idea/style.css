@@ -1,0 +1,138 @@
+/* Typography */
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Colors */
+:root {
+    --primary-color: #e67e22;   /* Оранжевий */
+    --secondary-color: #d35400; /* Темно-оранжевий */
+    --accent-color: #e74c3c;    /* Червоний */
+    --background-color: #ecf0f1; /* Світло-сірий */
+    --text-color: #2c3e50;      /* Темно-синій */
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Layout */
+body {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Components */
+.tabs {
+    display: flex;              /* Використовуємо Flexbox */
+    justify-content: space-between; /* Вирівнюємо вкладки */
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tab-link {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 20px; /* Відступи вкладок */
+    transition: 0.3s;
+    font-size: 17px;
+    color: white;
+    flex-grow: 1; /* Дозволяємо вкладкам рости */
+    text-align: center; /* Центруємо текст вкладок */
+}
+
+.tab-link:not(:last-child) {
+    margin-right: 10px; /* Відступ між вкладками */
+}
+
+.tab-link:hover {
+    background-color: var(--accent-color);
+}
+
+.tab-link.active {
+    background-color: var(--secondary-color);
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-top: none;
+    background-color: white;
+}
+
+.active-tab {
+    display: block;
+}
+
+h2 {
+    color: var(--primary-color);
+    text-align: center; /* Центруємо заголовок */
+}
+
+input[type=text], input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid var(--text-color); /* Змінено на основний колір тексту */
+    border-radius: 4px;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    width: auto;
+    margin-top: 10px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+.form-section {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.book-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.book-title {
+    font-weight: bold;
+}
+
+.book-info {
+    margin-bottom: 5px;
+}
+
+.total-expense {
+    margin-bottom: 10px;
+    font-weight: bold;
+}

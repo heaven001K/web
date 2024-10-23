@@ -105,3 +105,22 @@ button.delete:hover {
 #total-passengers{
     padding-top: 20px;
 }
+
+.tabs {
+    display: flex;
+}
+.tab {
+    padding: 10px;
+    cursor: pointer;
+    background-color: lightgray;
+    margin-right: 5px;
+}
+.tab.active {
+    background-color: darkgray;
+}
+.tab-content {
+    display: none;
+}
+.tab-content.active {
+    display: block;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бібліотека літаків</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="tabs">
+    <button class="tab-link" onclick="openTab(event, 'plane-list')">Мої літаки</button>
+    <button class="tab-link" onclick="openTab(event, 'create')">Додати Літак</button>
+    <button class="tab-link" onclick="openTab(event, 'edit')">Редагувати Літак</button>
+</div>
+
+<div id="plane-list" class="tab-content active-tab">
+    <h2>Список літаків</h2>
+    <div>
+        <div>
+            <input type="text" id="search" placeholder="Пошук..." oninput="searchPlane()">
+            <button onclick="resetSearch()">Скидання</button>
+            <button onclick="sortPlanes()">Сортувати за пасажирами</button>
+        </div>
+    </div>
+    <div class="total-expense">
+        Загальна кількість пального: <span id="total-fuel">0</span> літрів<br>
+        Загальна кількість пасажирів: <span id="total-passengers">0</span>
+    </div>
+
+    <div id="plane-list-content"></div>
+</div>
+
+<div id="create" class="tab-content">
+    <h2>Додати новий літак</h2>
+    <div class="form-section">
+        <label>Назва:</label>
+        <input type="text" id="title-create"><br>
+        <label>Компанія:</label>
+        <input type="text" id="company-create"><br>
+        <label>Кількість палива:</label>
+        <input type="number" id="fuel-create"><br>
+        <label>Кількість пасажирів:</label>
+        <input type="number" id="passengers-create"><br>
+        <button onclick="addPlane()">Додати літак</button>
+    </div>
+    <div class="error-message" id="create-error" style="display:none;">Заповніть всі поля.</div>
+</div>
+
+<div id="edit" class="tab-content">
+    <h2>Редагувати літак</h2>
+    <div class="form-section">
+        <label>Назва:</label>
+        <input type="text" id="title-edit"><br>
+        <label>Компанія:</label>
+        <input type="text" id="company-edit"><br>
+        <label>Кількість палива:</label>
+        <input type="number" id="fuel-edit"><br>
+        <label>Кількість пасажирів:</label>
+        <input type="number" id="passengers-edit"><br>
+        <button onclick="saveChanges()">Зберегти зміни</button>
+    </div>
+    <div class="error-message" id="edit-error" style="display:none;">Заповніть всі поля.</div>
+</div>
+
+<script src="lol.js"></script>
+</body>
+</html>
